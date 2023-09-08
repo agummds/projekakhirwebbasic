@@ -1,117 +1,265 @@
 <!DOCTYPE html>
+<style>
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+
+    body {
+        height: 100vh;
+        font-family: 'Montserrat', sans-serif;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: beige;
+    }
+
+    .navbar-a {
+        max-width: 1300px;
+        width: 100%;
+        margin-inline: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        background-color: beige;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-a.header-a.toga {
+        width: auto;
+        
+    }
+
+    .list_nav ul {
+        padding-left: 0;
+        display: flex;
+        justify-content: center;
+        gap: 2rem 1rem;
+        
+    }
+
+    .list_nav li {
+        list-style-type: none;
+    }
+
+    .list_nav li a {
+        text-decoration: none;
+        font-size: 1.05rem;
+        font-weight: 500;
+        color: black;
+        padding: .5rem 1rem;
+        border-radius: 999px;
+        transition: all .2s ease-in-out;
+    }
+
+    .list_nav li:hover a {
+        background-color: greenyellow;
+        color: black;
+    }
+
+    main {
+        max-width: 2500px;
+        width: 100%;
+        margin-inline: auto;
+        padding: 5rem 3rem;
+        flex: 1;
+        display: flex;
+        align-items: center;
+    }
+
+    .content {
+        flex: 1;
+        display: flex;
+        align-items: center;
+    }
+
+    .isi-content {
+        flex: 1 4;
+    }
+
+    .judul {
+        font-size: 2rem;
+        margin-block: 1rem;
+    }
+
+    main .content p {
+        line-height: 1.7rem;
+        font-size: 1.2rem;
+    }
+
+    .content_image img {
+        margin: auto;
+        min-width: 250px;
+        max-width: 550px;
+    }
+
+    /*@media screen and (max-width: 768px) { --> -->
+        .navbar-a {
+            flex-direction: column;
+        }
+
+        .list_nav ul {
+            flex-wrap: wrap;
+            column-gap: 0.5rem;
+        }
+
+        main {
+            padding: 1rem 3rem;
+        }
+
+        .content {
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .isi-content.judul {
+            font-size: 3rem;
+        }
+
+        main .content p {
+            font-size: 1rem;
+        }
+
+        .content_image img {
+            order: -1;
+        }
+    }*/
+</style>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tanaman Obat Keluarga</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Tanaman Obat Keluarga</h1>
-        <nav>
+    <header class="navbar-a">
+        <div class="header-a-toga">
+            <h3>TOGA</h3>
+        </div>
+        <nav class="list_nav">
             <ul>
-                <li><a href="Dashboard">Dashboard</a></li>
-                <li><a href="Artikel">Artikel</a></li>
-                <li><a href="Tentang Saya">Tentang Saya</a></li>
+                <li><a href="#Dashboard">Dashboard</a></li>
+                <li><a href="#Artikel">Artikel</a></li>
+                <li><a href="#TentangSaya">Tentang Saya</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <article>
-            <h2>Tanaman Obat: Manfaat dan Penggunaan</h2>
-            <p>Di dunia ini ada banyak sekali jenis tanaman toga atau tanaman obat yang mempunyai berbagai manfaat baik itu bagi kesehatan manusia atau lingkungan.
-
-Tanaman toga bermanfaat sebagai obat herbal dalam keadaan darurat ketika salah satu anggota keluarga sakit.
-
-Misalnya, jika ada orang masuk angin maka bisa mengonsumsi wedang jahe yang jahenya didapat dari pekarangan rumah.
-
-Selain sebagai obat, beberapa jenis tanaman ini juga berguna sebagai bumbu masakan seperti lengkuas, kunyit, kencur, seledri, jahe, serai, kemangi, dan lain-lain.</p>
-        </article>
-
-        <article>
-            <h2>Cara Menanam Tanaman Obat</h2>
-            <p>Menanam tanaman obat di halaman rumah Anda dapat menjadi cara yang baik untuk memastikan pasokan tanaman segar.</p>
-            <p>Cara menanamnya pun cukup beragam tergantung dengan jenisnya.Ada yang cara menanamnya hanya dengan menancapkan akar ke tanah, seperti jahe, lengkuas, kencur, kunyit, dan temulawak. 
-                Ada juga yang menanamnya dengan menggunakan anakan atau bibit, misalnya lidah buaya. Kita bisa menanamnya di lahan atau dimasukkan ke dalam wadah seperi pot, polybag, dan lain-lain. </p>
-            <p>Berbagai jenis yang mudah ditanam di rumah adalah jahe, lidah biaya, kumis kucing, kunyit, dauh sirih, kemangi, ketumbar, seledri, kencur, dan temulawak. Perawatannya pun tidaklah sulit karena tanaman toga tidak mudah terserang hama penyakit.</p>
-        </article>
-        
-        <aside>
-            <h2>Artikel</h2>
-            
-                <h3>Panduan Lengkap Menanam Jahe</h3>
-                <img src="jahe.jpg">
-                <p>
-                    <ol>
-                        <li>Persiapkan campuran pupuk humus dengan kandang dengan perbandingan 1:1</li>
-                        <li>Masukkan bahan-bahan di atas ke dalam pot atau wadah</li>
-                        <li>Letakkan beberapa jahe di bawah permukaan tanah</li>
-                        <li>Siram tanaman obat ini secukupnya</li>
-                        <li>Pastikan apabila hujan, tidak terguyur banyak air</li>
-                    </ol>
-                </p>
-                <h3>Cara Pengobatan Menggunakan Jahe</h3>
-                <img src="jahe2.jpg">
-                <p>
-                    <ol>
-                        <li>Panen jahe yang sudah kamu tanam dan rawat,</li>
-                        <li>Kupas jahe, lalu cuci hingga jahe bersih,</li>
-                        <li>Iris jahe, lalu sisihkan terlebih dahulu untuk membuat campuran lainnya,</li> 
-                        <li>Parut buah lemon, lalu sisihkan juga,</li>
-                        <li>Didihkan air tersebut, setelah itu langsung masukkan jahe dan parutan lemon. Biarkan hingga 5 menit,</li>   
-                        <li>Saring air lemon dan jahe yang sudah mendidih,</li>
-                        <li>Campur air lemon serta jahe tersebut dengan madu,</li>
-                        <li>Lalu didihkan campuran tersebut lagi dan aduk hingga mendidih,</li>
-                        <li>Diamkan hingga dingin, lalu simpan pada botol dan masukkan ke dalam kulkas.</li>
-                        <li>Sirup obat jahe siap digunakan kapan saja ketika kamu membutuhkannya.</li>
-                    </ol>
-                </p>
-                <h3>Daftar Tanaman Obat Keluarga untuk Kesehatan</h3>
-                <p>Tanaman obat keluarga atau biasa dikenal dengan toga berfungsi sebagai ketersediaan obat herbal di rumah. Bukan hanya itu, tanaman toga juga dapat digunakan sebagai pencegahan penyakit, meningkatkan kesehatan, dan mengatasi beberapa penyakit tertentu.</p>
-                <ol>
-                    <li>Lidah Buaya</li>
-                    <img src="lidahbuaya.jpeg">
-                    <li>Daun Ketumbar</li>
-                    <img src="daun ketumbar.jpeg">
-                    <li>Sirih Merah</li>
-                    <img src="sirihmerah.jpg">
-                    <li>Lavender</li>
-                    <img src="lavender.jpeg">
-                    <li>Kumis Kucing</li>
-                    <img src="kumiskucing.jpg">
-                </ol>
-        </aside>
-        <aside>
-            <header>
-            <h2>Tentang Saya</h2>
-            <figure>
-                <img src="agum.jpg">
-            </figure>
-            </header>
-            <section>
-                <table>
-                    <tr>
-                        <th>Nama</th>
-                        <td>Agum Medisa</td>
-                    </tr>
-                    <tr>
-                        <th>Email</th>
-                        <td>medisaagum@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <th>Asal Universitas</th>
-                        <td>Universitas Andalas</td>
-                    </tr>
-                    <tr>
-                        <th>Jurusan</th>
-                        <td>Teknik Komputer</td>
-                    </tr>
-                </table>
-            </section>
-        </aside>
+        <div class="content">
+            <div class="isi-content">
+                <h1 class="judul"> Tanaman Obat Keluarga </h1>
+                <p>Tanaman obat keluarga (disingkat TOGA) adalah tanaman hasil budidaya rumahan yang berkhasiat sebagai obat.
+                    Taman obat keluarga pada hakekatnya adalah sebidang tanah, baik di halaman rumah, kebun ataupun ladang yang digunakan untuk membudidayakan tanaman yang berkhasiat sebagai obat dalam rangka memenuhi keperluan keluarga akan obat-obatan</p>
+            </div>
+            <div class="content_image">
+                <img src="TOGA.jpeg">
+            </div>
+        </div>
     </main>
+    <aside>
+    <article id="Dashboard">
+        <h2> Tanaman Obat: Manfaat dan Penggunaan</h2>
+        <p>Di dunia ini ada banyak sekali jenis tanaman toga atau tanaman obat yang mempunyai berbagai manfaat baik itu bagi kesehatan manusia atau lingkungan.
 
+            Tanaman toga bermanfaat sebagai obat herbal dalam keadaan darurat ketika salah satu anggota keluarga sakit.
+
+            Misalnya, jika ada orang masuk angin maka bisa mengonsumsi wedang jahe yang jahenya didapat dari pekarangan rumah.
+
+            Selain sebagai obat, beberapa jenis tanaman ini juga berguna sebagai bumbu masakan seperti lengkuas, kunyit, kencur, seledri, jahe, serai, kemangi, dan lain-lain.</p>
+    </article>
+
+    <article>
+        <h2>Cara Menanam Tanaman Obat</h2>
+        <p>Menanam tanaman obat di halaman rumah Anda dapat menjadi cara yang baik untuk memastikan pasokan tanaman segar.</p>
+        <p>Cara menanamnya pun cukup beragam tergantung dengan jenisnya.Ada yang cara menanamnya hanya dengan menancapkan akar ke tanah, seperti jahe, lengkuas, kencur, kunyit, dan temulawak.
+            Ada juga yang menanamnya dengan menggunakan anakan atau bibit, misalnya lidah buaya. Kita bisa menanamnya di lahan atau dimasukkan ke dalam wadah seperi pot, polybag, dan lain-lain. </p>
+        <p>Berbagai jenis yang mudah ditanam di rumah adalah jahe, lidah biaya, kumis kucing, kunyit, dauh sirih, kemangi, ketumbar, seledri, kencur, dan temulawak. Perawatannya pun tidaklah sulit karena tanaman toga tidak mudah terserang hama penyakit.</p>
+    </article>
+    </aside>
+    <aside>
+        <article id="Artikel">
+            <h2>Artikel</h2>
+
+            <h3>Panduan Lengkap Menanam Jahe</h3>
+            <img src="jahe.jpg" class="image_satu">
+            <p>
+                <ol>
+                    <li>Persiapkan campuran pupuk humus dengan kandang dengan perbandingan 1:1</li>
+                    <li>Masukkan bahan-bahan di atas ke dalam pot atau wadah</li>
+                    <li>Letakkan beberapa jahe di bawah permukaan tanah</li>
+                    <li>Siram tanaman obat ini secukupnya</li>
+                    <li>Pastikan apabila hujan, tidak terguyur banyak air</li>
+                </ol>
+            </p>
+            <h3>Cara Pengobatan Menggunakan Jahe</h3>
+            <img src="jahe2.jpg" class="image_dua">
+            <p>
+                <ol>
+                    <li>Panen jahe yang sudah kamu tanam dan rawat,</li>
+                    <li>Kupas jahe, lalu cuci hingga jahe bersih,</li>
+                    <li>Iris jahe, lalu sisihkan terlebih dahulu untuk membuat campuran lainnya,</li>
+                    <li>Parut buah lemon, lalu sisihkan juga,</li>
+                    <li>Didihkan air tersebut, setelah itu langsung masukkan jahe dan parutan lemon. Biarkan hingga 5 menit,</li>
+                    <li>Saring air lemon dan jahe yang sudah mendidih,</li>
+                    <li>Campur air lemon serta jahe tersebut dengan madu,</li>
+                    <li>Lalu didihkan campuran tersebut lagi dan aduk hingga mendidih,</li>
+                    <li>Diamkan hingga dingin, lalu simpan pada botol dan masukkan ke dalam kulkas.</li>
+                    <li>Sirup obat jahe siap digunakan kapan saja ketika kamu membutuhkannya.</li>
+                </ol>
+            </p>
+            <h3>Daftar Tanaman Obat Keluarga untuk Kesehatan</h3>
+            <p>Tanaman obat keluarga atau biasa dikenal dengan toga berfungsi sebagai ketersediaan obat herbal di rumah. Bukan hanya itu, tanaman toga juga dapat digunakan sebagai pencegahan penyakit, meningkatkan kesehatan, dan mengatasi beberapa penyakit tertentu.</p>
+            <ol>
+                <li>Lidah Buaya</li>
+                <img src="lidahbuaya.jpeg">
+                <li>Daun Ketumbar</li>
+                <img src="daun ketumbar.jpeg">
+                <li>Sirih Merah</li>
+                <img src="sirihmerah.jpg">
+                <li>Lavender</li>
+                <img src="lavender.jpeg">
+                <li>Kumis Kucing</li>
+                <img src="kumiskucing.jpg">
+            </ol>
+        </article>
+    </aside>
+
+    <aside>
+        <header>
+            <article id="TentangSaya">
+                <h2>Tentang Saya</h2>
+                <figure>
+                    <img src="agum.jpg">
+                </figure>
+            </article>
+        </header>
+        <section>
+            <table>
+                <tr>
+                    <th>Nama</th>
+                    <td>Agum Medisa</td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td>medisaagum@gmail.com</td>
+                </tr>
+                <tr>
+                    <th>Asal Universitas</th>
+                    <td>Universitas Andalas</td>
+                </tr>
+                <tr>
+                    <th>Jurusan</th>
+                    <td>Teknik Komputer</td>
+                </tr>
+            </table>
+        </section>
+    </aside>
+    </div>
     <footer>
         <p>&copy; 2023 Tanaman Obat Keluarga by Agum Medisa</p>
     </footer>
